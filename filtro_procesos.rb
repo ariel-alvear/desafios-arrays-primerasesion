@@ -5,10 +5,12 @@ lines.times do |i|
     array << data[i].to_i
 end
 
-print array
+n = ARGV[0].to_i
 
-array.join(', ')
+new_array = array.select{ |x| x > n}
+
+
 
 File.new("procesos_filtrados.data", "w")
 
-File.write('/Users/Ariel/Desktop/desafiolatam/introduccion_ruby/arreglo_de_archivos/desafios-1', 'procesos_filtrados.data')
+File.write('procesos_filtrados.data', new_array.join(', '))
