@@ -1,9 +1,9 @@
-def average(arr)
+def average(arr) #este método calcula el promedio de los elementos de un arreglo
     results = (arr.sum / arr.size).to_f
     results
 end
 
-def clear_steps(x)
+def clear_steps(x) #este método pasa números string a integer, y filtra cualquier elemento que tenga letras.
     steps_number = x.map { |x| Integer(x) rescue ArgumentError }
     n = steps_number.size
     steps_correction1 = []
