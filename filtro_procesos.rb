@@ -10,7 +10,7 @@ def process_filter(file)
     new_array = array.select{ |x| x > n}
 
     File.new("procesos_filtrados.data", "w")
-    File.write('procesos_filtrados.data', new_array.join(', '))
+    File.write('procesos_filtrados.data', new_array.join("\n"))
 
 end
 
